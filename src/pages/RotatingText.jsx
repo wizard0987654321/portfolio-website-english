@@ -8,7 +8,7 @@ const words = [
   "coole Anwendungen"  
 ];
 
-export default function RotatingText() {
+export default function RotatingText({ isDarkMode = true }) {
   const [index, setIndex] = useState(0);
   const textRef = useRef(null);
 
@@ -35,7 +35,9 @@ export default function RotatingText() {
     <span className="overflow-hidden h-[1.2em] translate-y-[0.25em]">
       <span
         ref={textRef}
-        className="text-[#31473A] font-extrabold italic"
+        className={`font-extrabold italic transition-colors duration-500 ${
+          isDarkMode ? 'text-cyan-400' : 'text-[#31473A]'
+        }`}
       >
         {words[index]}
       </span>

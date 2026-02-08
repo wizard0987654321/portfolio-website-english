@@ -2,7 +2,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
-export default function AnimatedWord({ text }) {
+export default function AnimatedWord({ text, isDarkMode = false }) {
   const headingRef = useRef(null);
 
   useEffect(() => {
@@ -23,15 +23,17 @@ export default function AnimatedWord({ text }) {
 
   return (
     <h2
-  ref={headingRef}
-  style={{ fontFamily: "Montserrat, sans-serif" }}
-  className="text-white text-5xl font-extrabold tracking-wide"
->
-  {text.split("").map((char, i) => (
-    <span key={i} className="letter inline-block">
-      {char}
-    </span>
-  ))}
-</h2>
+      ref={headingRef}
+      style={{ fontFamily: "Montserrat, sans-serif" }}
+      className={`text-5xl font-extrabold tracking-wide transition-colors duration-500 ${
+        isDarkMode ? 'text-cyan-400' : 'text-[#31473A]'
+      }`}
+    >
+      {text.split("").map((char, i) => (
+        <span key={i} className="letter inline-block">
+          {char === " " ? "\u00A0" : char}
+        </span>
+      ))}
+    </h2>
   );
 }

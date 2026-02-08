@@ -1,3 +1,4 @@
+import { useOutletContext } from "react-router-dom";
 import SkillBar from "./SkillBar.jsx";
 import htmlIcon from "../assets/htmlIcon.svg";
 import cssIcon from "../assets/cssIcon.svg";
@@ -25,11 +26,13 @@ const mySkills = [
 ];
 
 export default function Skills() {
+  const { isDarkMode } = useOutletContext();
+  
   return (
     <div className="flex flex-col items-center gap-4 p-10">
-      <AnimatedWord text="Skills" />
+      <AnimatedWord text="Skills" isDarkMode={isDarkMode} />
       {mySkills.map((skill, index) => (
-        <SkillBar key={index} name={skill.name} level={skill.level} icon={skill.icon} />
+        <SkillBar key={index} name={skill.name} level={skill.level} icon={skill.icon} isDarkMode={isDarkMode} />
       ))}
     </div>
   );

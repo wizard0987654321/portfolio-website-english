@@ -9,7 +9,7 @@ const levelToPercent = {
   "little": "20%",
 };
 
-export default function SkillBar({ name, level, icon }) {
+export default function SkillBar({ name, level, icon, isDarkMode = true }) {
   const barRef = useRef(null);
   const containerRef = useRef(null);
   const percentage = levelToPercent[level] || "0%";
@@ -27,28 +27,42 @@ export default function SkillBar({ name, level, icon }) {
   return (
     <div 
       ref={containerRef}
-      className="group w-full max-w-md bg-white/5 border border-[#31473A]/10 p-5 rounded-2xl 
-                 hover:bg-white/10 hover:border-[#31473A]/30 transition-all duration-500 font-montserrat"
-                 style={{ fontFamily: "Montserrat, sans-serif" }}
+      className={`group w-full max-w-md p-5 rounded-2xl transition-all duration-500 font-montserrat ${
+        isDarkMode 
+          ? 'bg-slate-800/50 border border-slate-700 hover:bg-slate-800 hover:border-cyan-500/30' 
+          : 'bg-white/5 border border-[#31473A]/10 hover:bg-white/10 hover:border-[#31473A]/30'
+      }`}
+      style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="flex items-center gap-4 mb-4">
         {/* Icon Container */}
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#31473A]/10 
-                      group-hover:bg-[#31473A] group-hover:scale-110 transition-all duration-500">
+        <div className={`w-12 h-12 flex items-center justify-center rounded-xl transition-all duration-500 ${
+          isDarkMode 
+            ? 'bg-slate-700 group-hover:bg-cyan-500 group-hover:scale-110' 
+            : 'bg-[#31473A]/10 group-hover:bg-[#31473A] group-hover:scale-110'
+        }`}>
           <img 
             src={icon} 
             alt={name} 
-            className="w-6 h-6 invert group-hover:invert-0 transition-all duration-500" 
+            className={`w-6 h-6 transition-all duration-500 ${
+              isDarkMode 
+                ? 'brightness-0 invert group-hover:invert-0' 
+                : 'invert group-hover:invert-0'
+            }`}
           />
         </div>
 
         {/* Name and Level */}
         <div className="flex-1">
           <div className="flex justify-between items-baseline">
-            <h3 className="text-[#31473A] font-bold text-base uppercase tracking-widest">
+            <h3 className={`font-bold text-base uppercase tracking-widest transition-colors duration-500 ${
+              isDarkMode ? 'text-slate-200' : 'text-[#31473A]'
+            }`}>
               {name}
             </h3>
-            <span className="text-[#31473A]/50 text-[10px] font-bold uppercase tracking-tighter italic">
+            <span className={`text-[10px] font-bold uppercase tracking-tighter italic transition-colors duration-500 ${
+              isDarkMode ? 'text-cyan-400/70' : 'text-[#31473A]/50'
+            }`}>
               {level}
             </span>
           </div>
@@ -57,11 +71,13 @@ export default function SkillBar({ name, level, icon }) {
 
       {/* The Bar Container */}
       <div className="relative">
-        <div className="h-[4px] w-full bg-[#31473A]/10 rounded-full overflow-hidden">
+        <div className={`h-[4px] w-full rounded-full overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-[#31473A]/10'}`}>
           {/* The Animated Progress Line */}
           <div
             ref={barRef}
-            className="h-full bg-[#31473A] rounded-full relative"
+            className={`h-full rounded-full relative ${
+              isDarkMode ? 'bg-gradient-to-r from-cyan-500 to-blue-500' : 'bg-[#31473A]'
+            }`}
             style={{ width: "0%" }}
           >
             {/* Subtle light effect on the bar tip */}
