@@ -110,19 +110,14 @@ export default function About() {
                 : 'border-[#31473A] text-[#31473A] hover:bg-[#31473A] hover:text-white'
             }`}
           >
-            Weiter
+            Continue
           </button>
         ) : (
           <div className="text-center animate-in fade-in zoom-in-95 duration-1000">
             <h3 className={`text-sm md:text-lg font-black uppercase tracking-[0.3em] ${isDarkMode ? 'text-slate-200' : 'text-[#31473A]'}`}>
-              Das ist erst der Anfang
+              This is just the beginning
             </h3>
             <div className="mt-2 flex items-center justify-center gap-4">
-              <div className={`h-[1px] w-8 ${isDarkMode ? 'bg-cyan-500/30' : 'bg-[#31473A]/20'}`} />
-              <span className={`text-[10px] uppercase tracking-[0.5em] font-bold ${isDarkMode ? 'text-slate-500' : 'text-[#31473A]/40'}`}>
-                Wird fortgesetzt
-              </span>
-              <div className={`h-[1px] w-8 ${isDarkMode ? 'bg-cyan-500/30' : 'bg-[#31473A]/20'}`} />
             </div>
           </div>
         )}
