@@ -19,14 +19,14 @@ export default function Home() {
         <h1 className={`text-4xl md:text-6xl font-light leading-tight transition-colors duration-500 ${
           isDarkMode ? 'text-slate-100' : 'text-[#31473A]'
         }`}>
-          Hi, ich bin <span className={`font-semibold ${isDarkMode ? 'text-cyan-400' : ''}`}>Givi</span>! <br />
-          Ich baue <RotatingText isDarkMode={isDarkMode} />
+          Hi, I am <span className={`font-semibold ${isDarkMode ? 'text-cyan-400' : ''}`}>Givi</span>! <br />
+          I build <RotatingText isDarkMode={isDarkMode} />
         </h1>
         
         <p className={`mt-6 text-lg md:text-xl font-light tracking-wide transition-colors duration-500 ${
           isDarkMode ? 'text-slate-400' : 'text-[#31473A]/80'
         }`}>
-          Willkommen auf meiner Portfolio-Webseite!
+          Welcome to my portfolio website!
         </p>
       </div>
 

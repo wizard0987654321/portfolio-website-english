@@ -8,7 +8,7 @@ const myProjects = [
   {
     id: 1,
     title: "codeChameleon",
-    description: "Eine web Anwendung um JS Grundlagen zu lernen, mit eigen erstellten Design, Übungen und Quizzen.",
+    description: "A web application to learn JS basics, with custom design, exercises, and quizzes.",
     tech: ["HTML", "CSS", "JS", "GSAP"],
     github: "https://git.thm.de/gsbs28/frontend-development",
     live: "https://hosting.iem.thm.de/fed/2025/t3/",
@@ -16,7 +16,7 @@ const myProjects = [
   {
     id: 2,
     title: "Etch-a-Sketch",
-    description: "Ein minimalistischer Spiel, Anfangsprojekt mit HTML, CSS und JavaScript.",
+    description: "A minimalist game, an initial project with HTML, CSS, and JavaScript.",
     tech: ["HTML", "CSS", "JS"],
     github: "https://github.com/wizard0987654321/Etch-a-Sketch-TOP",
     live: "https://etch-a-sketch-project12.netlify.app/",
@@ -24,7 +24,7 @@ const myProjects = [
   {
     id: 3,
     title: "Soundrush",
-    description: "Mobile Rythmus-Spiel mit eigenerstelltem Design und Animationen.",
+    description: "Mobile rhythm game with custom design and animations.",
     tech: ["Kotlin", "Libgdx", "Figma"],
     github: "https://git.thm.de/mib-mase-ws25/teama",
     live: null,
@@ -32,7 +32,7 @@ const myProjects = [
   {
     id: 4,
     title: "Table Configurator",
-    description: "Tisch Konfigurator Webanwendung mit Registrierung, Anmeldung, 3D-Vorschau und interaktiven Elementen.",
+    description: "Table configurator web application with registration, login, 3D preview, and interactive elements.",
     tech: ["React", "React-Three-fiber", "Tailwind CSS", "Express.js", "PostgresQL"],
     github: "https://git.thm.de/asmh41/webframeworks",
     live: null,
@@ -40,7 +40,7 @@ const myProjects = [
   {
     id: 5,
     title: "Java Calculator",
-    description: "Ein einfacher Java Rechner mit GUI.",
+    description: "A simple Java calculator with GUI.",
     tech: ["Java"],
     github: "https://github.com/wizard0987654321/Calculator-Java",
     live: null,

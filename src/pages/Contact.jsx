@@ -68,7 +68,7 @@ export default function Contact() {
       </div>
 
       <p className={`text-sm italic mt-10 transition-colors duration-500 ${isDarkMode ? 'text-slate-500' : 'text-white/40'}`}>
-        Lass uns gemeinsam etwas Großartiges bauen.
+        Let's build something great together.
       </p>
     </main>
   );

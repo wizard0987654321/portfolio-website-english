@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const words = [
-  "spannende Spiele",          
-  "elegante Webseiten",           
-  "interessante Designs",      
-  "coole Anwendungen"  
+  "exciting games",          
+  "elegant websites",           
+  "interesting designs",      
+  "cool applications"  
 ];
 
 export default function RotatingText({ isDarkMode = true }) {

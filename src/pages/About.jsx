@@ -7,11 +7,11 @@ export default function About() {
   const { isDarkMode } = useOutletContext();
   
   const milestones = [
-    { year: "2022", event: "Erste Zeilen Code" },
-    { year: "2023", event: "CS50 beendet" },
-    { year: "2023", event: "Studienbeginn THM" },
+    { year: "2022", event: "First lines of code" },
+    { year: "2023", event: "Finished CS50" },
+    { year: "2023", event: "Started studies at THM" },
     { year: "2024", event: "The Odin Project" },
-    { year: "2026", event: "Studienende THM" }
+    { year: "2026", event: "Graduation from THM" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +45,7 @@ export default function About() {
       }`}
     >
       <div className="mb-24">
-        <AnimatedWord text="Mein Weg" isDarkMode={isDarkMode} />
+        <AnimatedWord text="My Journey" isDarkMode={isDarkMode} />
       </div>
 
       <div className="w-full max-w-5xl relative">
