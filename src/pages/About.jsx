@@ -41,7 +41,7 @@ export default function About() {
     <main
       style={{ fontFamily: "'Montserrat', sans-serif" }}
       className={`min-h-screen w-full flex flex-col items-center justify-center px-6 transition-colors duration-500 ${
-        isDarkMode ? 'text-slate-200' : 'text-[#31473A]'
+        isDarkMode ? 'text-slate-200' : 'text-white'
       }`}
     >
       <div className="mb-24">
@@ -107,14 +107,14 @@ export default function About() {
             className={`px-12 py-3 border-2 font-black uppercase tracking-[0.2em] text-[10px] rounded-full transition-all duration-500 active:scale-95 shadow-sm hover:shadow-md ${
               isDarkMode 
                 ? 'border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-slate-900' 
-                : 'border-[#31473A] text-[#31473A] hover:bg-[#31473A] hover:text-white'
+                : 'border-[#31473A] text-[#31473A]'
             }`}
           >
             Continue
           </button>
         ) : (
           <div className="text-center animate-in fade-in zoom-in-95 duration-1000">
-            <h3 className={`text-sm md:text-lg font-black uppercase tracking-[0.3em] ${isDarkMode ? 'text-slate-200' : 'text-[#31473A]'}`}>
+            <h3 className={`text-sm md:text-lg font-black uppercase tracking-[0.3em] ${isDarkMode ? 'text-slate-200' : 'text-white'}`}>
               This is just the beginning
             </h3>
             <div className="mt-2 flex items-center justify-center gap-4">

@@ -56,12 +56,12 @@ export default function SkillBar({ name, level, icon, isDarkMode = true }) {
         <div className="flex-1">
           <div className="flex justify-between items-baseline">
             <h3 className={`font-bold text-base uppercase tracking-widest transition-colors duration-500 ${
-              isDarkMode ? 'text-slate-200' : 'text-[#31473A]'
+              isDarkMode ? 'text-slate-200' : 'text-white'
             }`}>
               {name}
             </h3>
             <span className={`text-[10px] font-bold uppercase tracking-tighter italic transition-colors duration-500 ${
-              isDarkMode ? 'text-cyan-400/70' : 'text-[#31473A]/50'
+              isDarkMode ? 'text-cyan-400/70' : 'text-white/50'
             }`}>
               {level}
             </span>

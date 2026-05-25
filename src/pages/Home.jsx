@@ -17,14 +17,14 @@ export default function Home() {
       {/* Hero Content */}
       <div className="max-w-3xl text-center">
         <h1 className={`text-4xl md:text-6xl font-light leading-tight transition-colors duration-500 ${
-          isDarkMode ? 'text-slate-100' : 'text-[#31473A]'
+          isDarkMode ? 'text-slate-100' : 'text-white'
         }`}>
           Hi, I am <span className={`font-semibold ${isDarkMode ? 'text-cyan-400' : ''}`}>Givi</span>! <br />
           I build <RotatingText isDarkMode={isDarkMode} />
         </h1>
         
         <p className={`mt-6 text-lg md:text-xl font-light tracking-wide transition-colors duration-500 ${
-          isDarkMode ? 'text-slate-400' : 'text-[#31473A]/80'
+          isDarkMode ? 'text-slate-400' : 'text-white/80'
         }`}>
           Welcome to my portfolio website!
         </p>

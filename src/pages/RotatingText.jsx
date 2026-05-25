@@ -36,7 +36,7 @@ export default function RotatingText({ isDarkMode = true }) {
       <span
         ref={textRef}
         className={`font-extrabold italic transition-colors duration-500 ${
-          isDarkMode ? 'text-cyan-400' : 'text-[#31473A]'
+          isDarkMode ? 'text-cyan-400' : 'text-white'
         }`}
       >
         {words[index]}

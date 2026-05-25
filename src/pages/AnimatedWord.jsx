@@ -26,7 +26,7 @@ export default function AnimatedWord({ text, isDarkMode = false }) {
       ref={headingRef}
       style={{ fontFamily: "Montserrat, sans-serif" }}
       className={`text-5xl font-extrabold tracking-wide transition-colors duration-500 ${
-        isDarkMode ? 'text-cyan-400' : 'text-[#31473A]'
+        isDarkMode ? 'text-cyan-400' : 'text-white'
       }`}
     >
       {text.split("").map((char, i) => (
